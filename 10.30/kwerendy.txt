@@ -1,0 +1,13 @@
+a) Oracle:
+DESCRIBE AdventureWorksDW2022.dbo.FactInternetSales;
+SELECT * FROM user_tab_columns WHERE table_name = 'FACTINTERNETSALES';
+
+b)PostgreSQL:
+SELECT column_name, data_type, is_nullable
+FROM information_schema.columns
+WHERE table_name = 'factinternetsales';
+
+c) MySQL:
+DESCRIBE AdventureWorksDW2022.dbo.FactInternetSales;
+SHOW COLUMNS FROM AdventureWorksDW2019.dbo.FactInternetSales;
+SHOW CREATE TABLE AdventureWorksDW2022.dbo.FactInternetSales;
