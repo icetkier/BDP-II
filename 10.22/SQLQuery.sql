@@ -1,23 +1,25 @@
-DECLARE @YearsAgo INT = 11; 
-
-DECLARE @DateYearsAgo DATE = DATEADD(YEAR, -@YearsAgo, GETDATE());
-
-SELECT 
-    f.CurrencyKey,
-    f.DateKey,
-    f.AverageRate,
-    f.EndOfDayRate,
-    f.Date,
-    d.CurrencyAlternateKey
-FROM 
-    AdventureWorksDW2022.dbo.FactCurrencyRate AS f
-INNER JOIN 
-    AdventureWorksDW2022.dbo.DimCurrency AS d
-ON 
-    f.CurrencyKey = d.CurrencyKey
-WHERE 
-    (d.CurrencyAlternateKey = 'GBP' OR d.CurrencyAlternateKey = 'EUR')
-    AND f.Date <= @DateYearsAgo;
+CREATE PROCEDURE usp_GetCurrencyRates
+    @YearsAgo INT = 11
+AS
+BEGIN
+    DECLARE @DateYearsAgo DATE = DATEADD(YEAR, -@YearsAgo, GETDATE());
+    SELECT 
+        f.CurrencyKey,
+        f.DateKey,
+        f.AverageRate,
+        f.EndOfDayRate,
+        f.Date,
+        d.CurrencyAlternateKey
+    FROM 
+        AdventureWorksDW2022.dbo.FactCurrencyRate AS f
+    INNER JOIN 
+        AdventureWorksDW2022.dbo.DimCurrency AS d
+    ON 
+        f.CurrencyKey = d.CurrencyKey
+    WHERE 
+        (d.CurrencyAlternateKey = 'GBP' OR d.CurrencyAlternateKey = 'EUR')
+        AND f.Date <= @DateYearsAgo;
+END;
 
 -- Kwerenda jest zapytaniem skierowanym do bazy danych, które pozwala na przeszukiwanie, przegl¹danie i analizowanie danych. Kwerendy s³u¿¹ do
 -- wyci¹gania konkretnej informacji z bazy danych na podstawie ustalonych kryteriów, czêsto w celu jednorazowego u¿ycia lub analizy bie¿¹cych danych.
