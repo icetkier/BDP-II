@@ -9,5 +9,5 @@ WHERE table_name = 'factinternetsales';
 
 c) MySQL:
 DESCRIBE AdventureWorksDW2022.dbo.FactInternetSales;
-SHOW COLUMNS FROM AdventureWorksDW2019.dbo.FactInternetSales;
+SHOW COLUMNS FROM AdventureWorksDW2022.dbo.FactInternetSales;
 SHOW CREATE TABLE AdventureWorksDW2022.dbo.FactInternetSales;
