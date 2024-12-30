@@ -1,0 +1,16 @@
+12:55:05.07 30-12-2024 - Downloading file - Successful
+12:55:05.12 30-12-2024 - Unzipping file - Successful
+12:55:05.15 30-12-2024 - Removing blank lines - Successful
+12:55:05.17 30-12-2024 - Removing SecretCode - Successful
+12:55:05.19 30-12-2024 - Removing duplicates - Successful
+12:55:05.20 30-12-2024 - Removing lines with wrong number of columns - Successful
+12:55:05.22 30-12-2024 - Removing lines with missing data - Successful
+12:55:05.24 30-12-2024 - Removing lines with OrderQuantity>100 - Successful
+12:55:05.25 30-12-2024 - Removing lines with wrong name format - Successful
+12:55:05.28 30-12-2024 - Splitting Customer_Name column - Successful
+12:55:05.30 30-12-2024 - Converting decimal separator in UnitPrice column - Successful
+12:55:05.59 30-12-2024 - Creating CUSTOMERS_406342 table in MySQL - Successful
+12:55:06.24 30-12-2024 - Loading data to CUSTOMERS_406342 table - Successful
+12:55:07.06 30-12-2024 - Updating SecretCode in CUSTOMERS_406342 table - Successful
+12:55:07.50 30-12-2024 - Exporting table CUSTOMERS_406342 to CSV - Successful
+12:55:07.54 30-12-2024 - Deleting temporary files - Successful

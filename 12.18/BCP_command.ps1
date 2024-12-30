@@ -1,0 +1,2 @@
+bcp AdventureWorksDW2022.dbo.CUSTOMERS_406342 in "PROCESSED\CUSTOMERS_406342.csv" -S "ASUS-Julia\MSSQLSERVER1" -T -F 2 -t "`t" -r "`n" -f "customers.fmt"
+# bcp AdventureWorksDW2022.dbo.CUSTOMERS_406342 in "PROCESSED\CUSTOMERS_406342.csv" -S "ASUS-Julia\MSSQLSERVER1" -T -F 2 -t "`t" -r "`n" -c
